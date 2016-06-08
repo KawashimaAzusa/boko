@@ -97,7 +97,7 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
     }
 
     private void changeState() {
-        Log.d(TAG, "changeState : " + mState);
+        Log.d(TAG, "cwhangeState : " + mState);
         if (mAct != 0) {
             mDamage += 1;
         }

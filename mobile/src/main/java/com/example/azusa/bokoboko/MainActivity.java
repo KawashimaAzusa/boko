@@ -25,5 +25,14 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        Button Button = (Button)findViewById(R.id.button);
+        Button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.example.azusa.bokoboko", "com.example.azusa.bokoboko.MyActivity1");
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -173,21 +173,21 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
             switch (mState) {
                 case 1 :
                     if (mStateTimer > PUNCH_FRAME - 3 ) {
-                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p4),0,0,null);
+                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p1),0,0,null);
                     } else {
                         canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p0),0,0,null);
                     }
                     break;
                 case 2 :
                     if (mStateTimer > UPPER_FRAME - 3) {
-                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p4),0,0,null);
+                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p2),0,0,null);
                     } else {
                         canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p0),0,0,null);
                     }
                     break;
                 case 3 :
                     if (mStateTimer > HOOK_FRAME - 3) {
-                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p4),0,0,null);
+                        canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p3),0,0,null);
                     } else {
                         canvas.drawBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.p0),0,0,null);
                     }

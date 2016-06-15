@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  * Created by AZUSA on 2016/06/15.
  */
 public class MySurfaceView2 extends SurfaceView implements SurfaceHolder.Callback, Runnable {
-        private final String TAG = MySurfaceView.class.getName();
+        private final String TAG = MySurfaceView2.class.getName();
         private final int PUNCH_FRAME = 10;
         private final int UPPER_FRAME = 10;
         private final int HOOK_FRAME = 10;

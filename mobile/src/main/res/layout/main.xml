@@ -9,5 +9,13 @@
         android:layout_height="wrap_content"
         android:text="メイン"
         android:id="@+id/btnDisp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="メイン2"
+        android:id="@+id/button" />
+
+
 </LinearLayout>
 

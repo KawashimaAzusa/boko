@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyActivity"></activity>
-
+        <activity android:name=".MyActivity1"></activity>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>
 

@@ -2,6 +2,7 @@ package com.example.azusa.bokoboko;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,8 +27,9 @@ public class MyActivity extends Activity  implements GoogleApiClient.ConnectionC
 
     private GoogleApiClient mGoogleApiClient;
     private MySurfaceView mSurfaceView;
-   private SoundPool mSoundPool;
-    //private int mSE1, mSE2, mSE3;
+    //private MySurfaceView2 mSurfaceView2;
+    private SoundPool mSoundPool;
+    private int mSE1, mSE2, mSE3;
    ActionBar ab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +90,11 @@ public class MyActivity extends Activity  implements GoogleApiClient.ConnectionC
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
-        // mSoundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
-       /* mSE1 = mSoundPool.load(this, R.raw.se1, 1);
+        mSoundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+        mSE1 = mSoundPool.load(this, R.raw.se1, 1);
         mSE2 = mSoundPool.load(this, R.raw.se2, 1);
         mSE3 = mSoundPool.load(this, R.raw.se3, 1);
-*/
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         Action viewAction = Action.newAction(
@@ -128,7 +130,7 @@ public class MyActivity extends Activity  implements GoogleApiClient.ConnectionC
             Wearable.MessageApi.removeListener(mGoogleApiClient, this);
             mGoogleApiClient.disconnect();
         }
-        // mSoundPool.release();
+         mSoundPool.release();
     }
 
     @Override
@@ -169,13 +171,13 @@ public class MyActivity extends Activity  implements GoogleApiClient.ConnectionC
         String msg = messageEvent.getPath();
         if (SEND_MESSAGES[1].equals(msg)) {
             mSurfaceView.punch();
-           // mSoundPool.play(mSE1,1.0f, 1.0f, 0, 0, 1.0f);
+            mSoundPool.play(mSE1,1.0f, 1.0f, 0, 0, 1.0f);
         } else if (SEND_MESSAGES[2].equals(msg)) {
             mSurfaceView.upper();
-            //mSoundPool.play(mSE2, 1.0f, 1.0f, 0, 0, 1.0f);
+            mSoundPool.play(mSE2, 1.0f, 1.0f, 0, 0, 1.0f);
         } else if (SEND_MESSAGES[3].equals(msg)) {
             mSurfaceView.hook();
-            //mSoundPool.play(mSE3, 1.0f, 1.0f, 0, 0, 1.0f);
+            mSoundPool.play(mSE3, 1.0f, 1.0f, 0, 0, 1.0f);
         }
     }
 }
